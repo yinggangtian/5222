@@ -13,14 +13,8 @@ from solution.search import find_path, states_to_path
 try:
     from flatland.core.transition_map import GridTransitionMap
     from flatland.utils.controller import (
-        get_action,
-        Train_Actions,
-        Directions,
-        check_conflict,
-        path_controller,
         evaluator,
-        remote_evaluator,
-        VisualiserOptions,
+        remote_evaluator
     )
 except Exception as e:
     eprint("Cannot load flatland modules!")
@@ -91,6 +85,7 @@ def get_path(
     # a perfect admissible heuristic, so A* expands only states on an optimal
     # path.
     ############
+    # important method/ core code
     domain = domain_for(rail)
     start_state = domain.state_of(start, start_direction)
     goal_state = domain.goal_state(goal)

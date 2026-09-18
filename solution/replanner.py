@@ -34,7 +34,7 @@ from .prioritized import FleetPlan
 
 #: Statuses meaning the train is off the map and needs no further planning.
 _FINISHED = (2, 3)
-
+#goal
 #: How often one train may be displaced within a single repair. Without a cap,
 #: two trains in a tight spot take turns bumping each other indefinitely.
 MAX_BUMPS_PER_TRAIN = 2

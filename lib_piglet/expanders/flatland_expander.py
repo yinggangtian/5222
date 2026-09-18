@@ -42,7 +42,7 @@ def _action(move: Move_Actions) -> grid_action:
 MOVES: Tuple[grid_action, ...] = tuple(_action(m) for m in _HEADING_MOVES)
 WAIT: grid_action = _action(Move_Actions.MOVE_WAIT)
 
-
+# Question 1: flatland_expander expands (cell, heading) states, which is all，, train 
 class flatland_expander(base_expander):
     """Successors of a ``(cell, heading)`` state -- question 1.
 

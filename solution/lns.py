@@ -38,7 +38,7 @@ from .prioritized import FleetPlan
 #: ordering through a busy junction.  Cycling these sizes is a deliberately
 #: small, dependency-free version of the adaptive-size idea in recent MAPF-LNS
 #: work.  The actual size is capped by the number of movable trains.
-NEIGHBOURHOOD_SIZES = (4, 8, 12, 16)
+NEIGHBOURHOOD_SIZES = (4, 8, 12, 16)#goal different for normal LNS
 
 #: A rearrangement is kept whenever the group is cheaper overall, even if it
 #: leaves one train worse off than it was.
@@ -55,7 +55,7 @@ NEIGHBOURHOOD_SIZES = (4, 8, 12, 16)
 #: The Q3 objective is SIC plus twice the total number of delayed timesteps.
 #: ``penalties`` is displayed separately by the contest server, which can make
 #: it look as if it has already been folded into SIC; it has not.
-PENALTY_WEIGHT = 2
+PENALTY_WEIGHT = 2#goal
 
 
 def improve(
@@ -142,7 +142,7 @@ def improve(
 
     return (iterations, accepted, start_total - best)
 
-
+#goal function: SIC + 2* delay
 def _agent_cost(plan: FleetPlan, agent_id: int) -> int:
     """What this train's path costs under the assignment's scoring.
 
@@ -223,7 +223,7 @@ def _neighbourhood(
         group.add(movable[rng.randrange(len(movable))])
     return list(group)
 
-
+# urgency differ
 def _repair_order(
     plan: FleetPlan,
     group: Sequence[int],

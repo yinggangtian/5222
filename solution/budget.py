@@ -20,7 +20,7 @@ to a poor score instead of no score at all.
 
 import time
 from typing import Optional
-
+#goal
 #: What planning is allowed overall, in seconds, well under the contest
 #: server's one hour for the question. The margin covers the simulator's own
 #: execution time, which is not planning and is not measured here: locally that

@@ -94,13 +94,14 @@ def get_path(agents: List[EnvAgent], rail: GridTransitionMap, max_timestep: int)
     # repair the episode triggers -- shares one wall-clock budget, so a hidden
     # instance that the planner handles badly cannot take the whole question
     # down with it.
+    # start time write
     clock.start_instance()
     _plan = FleetPlan(domain_for(rail), agents, max_timestep)
     plan_fleet(_plan, agents)
     # Prioritised planning never revisits its own ordering, which is where most
     # of the remaining cost is. Spend the idle runtime budget tearing small
     # groups of trains out and putting them back in a different order.
-    improve(_plan, agents, seconds=_lns_seconds(len(agents)))
+    improve(_plan, agents, seconds=_lns_seconds(len(agents))) #LNS：large neighbourhood search
     return _plan.paths
 
 

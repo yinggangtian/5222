@@ -40,7 +40,7 @@ from .search import find_timed_path
 #: while instead says the only thing that is actually known -- that the train
 #: is not moving yet -- and the repair that follows the expiry gets to try
 #: again with whatever the railway looks like by then.
-PARK_HORIZON = 32
+PARK_HORIZON = 32 #goal
 
 
 class FleetPlan:

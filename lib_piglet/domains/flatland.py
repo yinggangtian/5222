@@ -99,7 +99,7 @@ class flatland_domain(base_domain[int]):
     # ------------------------------------------------------------------
     # state encoding
     # ------------------------------------------------------------------
-
+#question1.py
     def state_of(self, position: Sequence[int], direction: int) -> int:
         """Encode a ``(row, column)`` position and heading as a state."""
         return (int(position[0]) * self.width_ + int(position[1])) * 4 + int(direction)
@@ -132,7 +132,7 @@ class flatland_domain(base_domain[int]):
     # ------------------------------------------------------------------
     # goal distances
     # ------------------------------------------------------------------
-
+# reverse BFS for Question 1
     def goal_distances(self, goal_state: int) -> array:
         """Exact remaining cost of every state, for one goal.
 

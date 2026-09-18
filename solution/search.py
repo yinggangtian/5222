@@ -26,6 +26,7 @@ from lib_piglet.utils.data_structure import bin_heap
 #: Expansions one space-time query may spend before it is abandoned. Capping
 #: the search rather than the clock keeps a run reproducible; prioritised
 #: planning always has a looser plan to fall back on.
+#goal
 DEFAULT_BUDGET = 200_000
 
 
@@ -51,7 +52,7 @@ def compare_node_f_state(a, b):
         return a.f_ >= b.f_
     return a.state_ >= b.state_
 
-
+# question1
 def find_path(
     domain: flatland_domain, start_state: int, goal_state: int
 ) -> Optional[List[int]]:
@@ -72,7 +73,7 @@ def find_path(
         return None
     return [node.state_ for node in solution.paths_]
 
-
+# question2
 def find_timed_path(
     domain: flatland_domain,
     start_state: int,
