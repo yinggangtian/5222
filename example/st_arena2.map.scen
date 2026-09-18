@@ -1,0 +1,11 @@
+domain grid4
+90	./example/gridmap/arena2.map	281	209	258	203	6	97	0
+90	./example/gridmap/arena2.map	281	209	268	190	6	97	0
+90	./example/gridmap/arena2.map	281	209	10	96	6	97	0
+90	./example/gridmap/arena2.map	281	209	279	196	6	97	0
+90	./example/gridmap/arena2.map	281	209	10	108	6	97	0
+90	./example/gridmap/arena2.map	281	209	270	197	6	97	0
+90	./example/gridmap/arena2.map	281	209	267	178	6	97	0
+90	./example/gridmap/arena2.map	281	209	11	107	6	97	0
+90	./example/gridmap/arena2.map	281	209	268	198	6	97	0
+90	./example/gridmap/arena2.map	281	209	5	112	6	97	0
